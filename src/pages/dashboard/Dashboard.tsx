@@ -1,12 +1,21 @@
 import React from "react";
 import { LayoutBaseDaPagina } from "../../shared/layouts";
-import { FerramentasDaListagem } from "../../shared/components";
+import {
+  FerramentasDaListagem,
+  FerramentasDeDetalhe,
+} from "../../shared/components";
 
 export const Dashboard = () => {
   return (
     <LayoutBaseDaPagina
       titulo="sexo"
-      barraDeFerramentas={<FerramentasDaListagem mostrarInputDaBusca />}
+      barraDeFerramentas={
+        <FerramentasDeDetalhe
+          mostrarBotaoSalvarEFechar
+          mostrarBotaoSalvarEFecharCarregando
+          mostrarBotaoNovoCarregando
+        />
+      }
     >
       testando
     </LayoutBaseDaPagina>
