@@ -8,6 +8,7 @@ import {
   Icon,
 } from "@mui/material";
 import React from "react";
+import { Environment } from "../../environment";
 
 interface IFerramentasDaListagemProps {
   textoDaBusca?: string;
@@ -42,7 +43,7 @@ export const FerramentasDaListagem: React.FC<IFerramentasDaListagemProps> = ({
         <TextField
           size="small"
           placeholder="Pesquisar"
-          value={textoDaBusca}
+          value={Environment.INPUT_DE_BUSCA}
           onChange={(e) => aoMudarTextoDaBusca?.(e.target.value)}
           InputProps={{
             endAdornment: (

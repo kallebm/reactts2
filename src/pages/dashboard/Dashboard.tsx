@@ -8,14 +8,8 @@ import {
 export const Dashboard = () => {
   return (
     <LayoutBaseDaPagina
-      titulo="sexo"
-      barraDeFerramentas={
-        <FerramentasDeDetalhe
-          mostrarBotaoSalvarEFechar
-          mostrarBotaoSalvarEFecharCarregando
-          mostrarBotaoNovoCarregando
-        />
-      }
+      titulo="Dashboard"
+      barraDeFerramentas={<FerramentasDeDetalhe mostrarBotaoSalvarEFechar />}
     >
       testando
     </LayoutBaseDaPagina>

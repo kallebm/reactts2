@@ -106,11 +106,11 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
               textOverflow={"ellipsis"}
               overflow={"hidden"}
             >
-              Salvar e Voltar
+              Salvar e Fechar
             </Typography>
           </Button>
         )}
-      {mostrarBotaoSalvarEFecharCarregando && (
+      {mostrarBotaoSalvarEFecharCarregando && !smDown && !mdDown && (
         <Skeleton width={110} height={60} />
       )}
 
