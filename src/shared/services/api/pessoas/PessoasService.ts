@@ -1,14 +1,14 @@
 import { Environment } from "../../../environment";
 import { Api } from "../axios-config";
 
-interface IDetalhePessoa {
+export interface IDetalhePessoa {
   id: number;
   email: string;
   cidadeId: number;
   nomeCompleto: string;
 }
 
-interface IListagemPessoa {
+export interface IListagemPessoa {
   id: number;
   email: string;
   cidadeId: number;
@@ -48,7 +48,7 @@ const getAll = async (
 
 const getById = async (id: number): Promise<IDetalhePessoa | Error> => {
   try {
-    const { data } = await Api.get(`/pessoas/{${id}}`);
+    const { data } = await Api.get(`/pessoas/${id}`);
 
     if (data) {
       return data;
