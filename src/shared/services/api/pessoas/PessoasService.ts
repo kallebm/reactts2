@@ -48,6 +48,7 @@ const getAll = async (
 
 const getById = async (id: number): Promise<IDetalhePessoa | Error> => {
   try {
+    console.log(id);
     const { data } = await Api.get(`/pessoas/${id}`);
 
     if (data) {
@@ -66,7 +67,7 @@ const create = async (
   dados: Omit<IDetalhePessoa, "id">
 ): Promise<number | Error> => {
   try {
-    const { data } = await Api.post<IDetalhePessoa>("/pessoas");
+    const { data } = await Api.post<IDetalhePessoa>("/pessoas", dados);
 
     if (data) {
       return data.id;
