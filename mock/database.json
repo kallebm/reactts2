@@ -1,19 +1,4 @@
 {
-  "pessoas": [
-    {
-      "id": 1
-    },
-    {
-      "id": 7,
-      "nomeCompleto": "dasdawda",
-      "email": "fd",
-      "cidadeId": ""
-    },
-    {
-      "nomeCompleto": "",
-      "email": "",
-      "cidadeId": "",
-      "id": 8
-    }
-  ]
+  "pessoas": [],
+  "cidades": []
 }
