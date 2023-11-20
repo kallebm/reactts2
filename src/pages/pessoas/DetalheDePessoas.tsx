@@ -6,6 +6,7 @@ import { PessoasService } from "../../shared/services/api/pessoas/PessoasService
 import { Box, Grid, LinearProgress, Paper, Typography } from "@mui/material";
 import { VTextField, VForm, useVForm } from "../../forms";
 import * as yup from "yup";
+import AutoCompleteCidade from "./components/AutoCompleteCidade";
 
 interface IFormData {
   email: string;
@@ -109,7 +110,7 @@ export const DetalheDePessoas = () => {
     } else {
       formRef.current?.setData({
         nomeCompleto: "",
-        cidadeId: "",
+        cidadeId: undefined,
         email: "",
       });
     }
@@ -169,11 +170,7 @@ export const DetalheDePessoas = () => {
             </Grid>
             <Grid container item direction={"row"}>
               <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
-                <VTextField
-                  label="Cidade"
-                  name={"cidadeId"}
-                  disabled={isLoading}
-                />
+                <AutoCompleteCidade isExternalLoading={isLoading} />
               </Grid>
             </Grid>
           </Grid>

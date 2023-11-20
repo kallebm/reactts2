@@ -1,4 +1,20 @@
 {
-  "pessoas": [],
-  "cidades": []
+  "pessoas": [
+    {
+      "id": 1,
+      "nomeCompleto": "adad",
+      "email": "adadad@fasda",
+      "cidadeId": 1
+    }
+  ],
+  "cidades": [
+    {
+      "nome": "asdada",
+      "id": 1
+    },
+    {
+      "nome": "dasdasdas",
+      "id": 2
+    }
+  ]
 }
