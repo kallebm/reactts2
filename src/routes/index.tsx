@@ -14,9 +14,9 @@ export const AppRoutes = () => {
 
   useEffect(() => {
     setDrawerOptions([
-      { label: "inbox", icon: "home", path: "/pagina-inicial" },
-      { label: "Pessoas", icon: "people", path: "/pessoas" },
+      { label: "Página Inicial", icon: "home", path: "/pagina-inicial" },
       { label: "Cidades", icon: "location_city", path: "/cidades" },
+      { label: "Pessoas", icon: "people", path: "/pessoas" },
     ]);
   }, []);
 

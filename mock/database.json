@@ -16,5 +16,8 @@
       "nome": "dasdasdas",
       "id": 2
     }
-  ]
+  ],
+  "auth": {
+    "accessToken": "abc"
+  }
 }
