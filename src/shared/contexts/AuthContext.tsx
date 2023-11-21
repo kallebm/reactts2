@@ -1,6 +1,7 @@
 import React, {
   createContext,
   useCallback,
+  useContext,
   useEffect,
   useMemo,
   useState,
@@ -14,13 +15,12 @@ interface IAuthContextData {
 }
 
 const AuthContext = createContext({} as IAuthContextData);
-2;
 
 interface IAuthProviderProps {
   children: React.ReactNode;
 }
 
-const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
+export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
   useEffect(() => {
     const accessToken = localStorage.getItem("APP_ACCESS_TOKEN");
 
@@ -62,4 +62,4 @@ const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
   );
 };
 
-export default AuthProvider;
+export const useAuthContext = () => useContext(AuthContext);
